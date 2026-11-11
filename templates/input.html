@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crop Recommendation</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Crop Recommendation Form</h1>
+
+    <form action="/result" method="POST">
+
+        <label>District</label>
+
+        <select name="district">
+
+            <option>Coimbatore</option>
+
+            <option>Tiruppur</option>
+
+        </select>
+
+        <label>Industry Type</label>
+
+        <select name="industry">
+
+            <option>Textile</option>
+
+            <option>Engineering</option>
+
+            <option>Foundry</option>
+
+            <option>Chemical</option>
+
+            <option>Food Processing</option>
+
+        </select>
+
+        <label>CO₂ Released (tons/year)</label>
+
+        <input
+        type="number"
+        name="co2"
+        step="0.1"
+        required>
+
+        <label>Available Land (Acres)</label>
+
+        <input
+        type="number"
+        name="land"
+        step="0.1"
+        required>
+
+        <label>Soil Type</label>
+
+        <select name="soil">
+
+            <option>Red Loam</option>
+
+            <option>Black</option>
+
+            <option>Loam</option>
+
+        </select>
+
+        <label>Water Availability</label>
+
+        <select name="water">
+
+            <option>Medium</option>
+
+            <option>High</option>
+
+        </select>
+
+        <br><br>
+
+        <button type="submit">
+
+            Get Recommendation
+
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+
+</html>
